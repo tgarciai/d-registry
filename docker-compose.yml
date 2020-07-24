@@ -1,0 +1,9 @@
+registry:
+  restart: always
+  image: registry:2
+  ports:
+    - 5000:5000
+  volumes:
+    - /usr/local/share/docker-registry-data:/var/lib/registry
+    - /usr/local/share/docker-registry-certs:/certs
+    - /usr/local/share/docker-registry-auth:/auth
